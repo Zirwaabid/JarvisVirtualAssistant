@@ -11,4 +11,18 @@ function speak(text) {
     window.speechSynthesis.speak(text_speak);
 }
 
-function wishMe() {}
+function wishMe() {
+    var day = new date();
+    var hour = day.gethours();
+    if (hour >= 0 && hour < 12) {
+        speak("Good Morning Mam....");
+    } else if (hour >= 12 && hour < 17) {
+        speak("Good Afternoon Mam....")
+    } else {
+        speak("Good Evening Mam")
+    }
+}
+window.addEventListener('load', () => {
+    speak("Initializing JARVIS...")
+    wishMe();
+})
