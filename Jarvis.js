@@ -25,4 +25,6 @@ function wishMe() {
 window.addEventListener('load', () => {
     speak("Initializing JARVIS...")
     wishMe();
-})
+});
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const recognition=new SpeechRecognition();
